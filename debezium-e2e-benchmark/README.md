@@ -1,10 +1,29 @@
 # Benchmark
 
-## Benchmark existing environment (DB Server / Kafka / Connector)
-
 The E2E benchmark is a pyton script which fill a special database table with data. One column is a timestap by insert into the table. The test compare this time with the time of the correspondig timestamp of the kafka massage in the topic. It create in the tpcdata directory the result csv and some png diagrams.
 
-in the tpc-config.json are all function SQL stored
+in the tpc-config.json are all function SQL stored in it.
+
+The control of how many test and commit controll could zou set in this part of the json:
+```
+"tpc": {
+        "count": 100000,
+        "commit.intervals": [
+            1,
+            100,
+            1000,
+            10000
+        ]
+    },
+```
+count of rows of the test. 
+commit.intervals array reflect row per interval, every entry run one benchmark test.
+
+Think about the parameter commit.intervals, set it not to high. The benchmark should help to compare it. 
+
+
+## Benchmark existing environment (DB Server / Kafka / Connector)
+
 
 
 
