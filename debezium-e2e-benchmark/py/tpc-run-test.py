@@ -108,7 +108,7 @@ def getjdbcconnection(config, tpcconfig):
 
 
 def main(argv):
-    with open('register.json') as f:
+    with open('../register.json') as f:
         config = json.load(f)
     with open('tpc-config.json') as f:
         tpcconfig = json.load(f)
