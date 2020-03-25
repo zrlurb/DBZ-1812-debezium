@@ -66,7 +66,7 @@ If you have an exist up und running debeyium environment, you can do the benchma
 
 
 
-## Benchmark debezium-example environment
+## Benchmark in debezium-example environment
 
 Run benchmark in one docker environment CENTOS
 
